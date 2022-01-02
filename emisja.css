@@ -1,0 +1,87 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 16px;
+	font-family: "Open Sans", Arial, sans-serif;
+	background-color: #161633;
+	font-weight: normal;
+	color: #a7b7cf;
+}
+
+.tab {
+	border-collapse: collapse;
+	/* border-spacing: 0; */
+	margin: 5px auto;
+	font-family: "Open Sans", Arial, sans-serif;
+	font-size: 1rem;
+	/* vertical-align: top; */
+	box-shadow: 0px 3px 10px #9bb6df;
+}
+
+.tab td {
+	border-color: #31315c;
+	/* border-style: solid; */
+	/* border-width: 1px; */
+	overflow: hidden;
+	padding: 0.7rem 1.5rem;
+	word-break: normal;
+	text-align: left;
+}
+
+.tab th {
+	color: #e3ba02;
+	background-color: #31315c;
+	/* border-color:#; */
+	/* border-style: solid; */
+	/* border-width: 1px; */
+	overflow: hidden;
+	padding: 0.3rem 0.4rem;
+	word-break: normal;
+	position: sticky;
+	text-align: center;
+	top: 0px;
+	will-change: transform;
+	text-transform: uppercase;
+	letter-spacing: 0.1rem;
+	font-size: 0.8rem;
+	text-emphasis-style: normal;
+}
+
+tr:nth-child(even) {
+	background-color: #221d40;
+}
+
+@media screen and (max-width: 767px) {
+	.tab {
+		width: auto !important;
+	}
+
+	.tab col {
+		width: auto !important;
+	}
+
+	.tab-wrap {
+		overflow-x: auto;
+		-webkit-overflow-scrolling: touch;
+		margin: auto 0px;
+	}
+}
+
+a {
+	text-decoration: none;
+	font-weight: normal;
+}
+
+a:link,
+a:visited {
+	color: #e3ba02;
+}
+
+a:hover,
+a:active {
+	color: crimson;
+}
