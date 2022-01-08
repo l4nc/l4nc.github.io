@@ -28,7 +28,7 @@ body {
 }
 
 .ukryty {
-	filter: blur(5px);
+	filter: blur(0px);
 	position: absolute;
 	bottom: 13%;
 	left: 59.5%;
