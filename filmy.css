@@ -1,0 +1,115 @@
+html {
+	box-sizing: border-box;
+	font-size: 100%;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+body {
+	margin: 0px;
+	padding: 20px;
+	background-color: #222325;
+	color: rgb(122, 33, 33);
+	font-family: Arial, Helvetica, sans-serif;
+	line-height: 1.4;
+}
+
+@font-face {
+	font-family: gang3;
+	font-style: normal;
+	src: url(/gang3.ttf);
+}
+
+h2 {
+	font-family: gang3;
+	font-size: 2rem;
+	margin: auto;
+	text-align: center;
+}
+h5 {
+	margin: auto;
+}
+
+.grid-parent {
+	display: grid;
+	grid-template-rows: 1fr;
+	gap: 20px;
+}
+
+section {
+	/* padding: 50px; */
+	border-radius: 12px;
+	height: 80%;
+}
+
+article {
+	padding: 1vw;
+	width: 100%;
+	font-size: 100%;
+	/* line-height: 100%; */
+	/* text-align: center; */
+}
+
+.chinskie {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	/* background: #0e095f;
+	background: linear-gradient(
+		90deg,
+		#020024 0%,
+		#090979 35%,
+		#00d4ff 100%
+		); */
+	justify-content: center;
+	background: url("/img/rys5.jpg") no-repeat center center;
+	background-size: cover;
+	padding: 1vw;
+	height: 100vh;
+	gap: 1vw;
+}
+
+.asia {
+	gap: 1vw;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	height: 100vh;
+	justify-content: center;
+	background: url("/img/rys8j.jpg") no-repeat center center;
+	background-size: cover;
+	padding: 1vw;
+}
+
+/* background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);  */
+
+@media only screen and (max-width: 600px) {
+	.asia,
+	.chinskie {
+		display: grid;
+		grid-template-columns: 1fr;
+		max-width: 100%;
+		margin: auto;
+	}
+}
+
+a {
+	text-decoration: none;
+	font-weight: normal;
+}
+
+a:link,
+a:visited {
+	color: black;
+}
+
+a:hover,
+a:active {
+	color: rgb(128, 16, 16);
+}
+
+li:hover {
+	background-color: rgba(0, 0, 0, 0.15);
+}
