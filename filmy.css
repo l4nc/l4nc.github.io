@@ -65,7 +65,7 @@ article {
 		#00d4ff 100%
 		); */
 	justify-content: center;
-	background: url("/img/rys5.jpg") no-repeat center center;
+	background: url("img/rys5.jpg") no-repeat center center;
 	background-size: cover;
 	padding: 1vw;
 	height: 100vh;
@@ -78,7 +78,7 @@ article {
 	grid-template-columns: repeat(3, 1fr);
 	height: 100vh;
 	justify-content: center;
-	background: url("/img/rys8j.jpg") no-repeat center center;
+	background: url("img/rys8.jpg") no-repeat center center;
 	background-size: cover;
 	padding: 1vw;
 }
