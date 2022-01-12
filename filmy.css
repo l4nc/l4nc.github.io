@@ -40,21 +40,8 @@ h5 {
 	gap: 20px;
 }
 
-section {
-	/* padding: 50px; */
-	border-radius: 12px;
-	height: 80%;
-}
-
-article {
-	padding: 1vw;
-	width: 100%;
-	font-size: 100%;
-	/* line-height: 100%; */
-	/* text-align: center; */
-}
-
 .chinskie {
+	border-radius: 12px;
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	/* background: #0e095f;
@@ -65,33 +52,48 @@ article {
 		#00d4ff 100%
 		); */
 	justify-content: center;
-	background: url("img/rys5.jpg") no-repeat center center;
+	background: url("/img/rys5.jpg") no-repeat center center;
 	background-size: cover;
 	padding: 1vw;
-	height: 100vh;
+	min-height: 100vh;
 	gap: 1vw;
 }
 
 .asia {
+	border-radius: 12px;
 	gap: 1vw;
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
-	height: 100vh;
+	min-height: 100vh;
 	justify-content: center;
-	background: url("img/rys8.jpg") no-repeat center center;
+	background: url("/img/rys8.jpg") no-repeat center center;
 	background-size: cover;
 	padding: 1vw;
 }
 
+article {
+	padding: 1vw;
+	width: 100%;
+	font-size: 100%;
+	/* line-height: 100%; */
+	/* text-align: center; */
+}
+
 /* background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);  */
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 950px) {
+	.asia,
+	.chinskie {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+	}
+}
+
+@media only screen and (max-width: 680px) {
 	.asia,
 	.chinskie {
 		display: grid;
 		grid-template-columns: 1fr;
-		max-width: 100%;
-		margin: auto;
 	}
 }
 
