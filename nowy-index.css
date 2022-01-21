@@ -1,0 +1,267 @@
+html {
+	font-size: 100%;
+	box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	background-color: #101010;
+	color: #ffffff;
+	font-family: "Poppins", Arial, Helvetica, sans-serif;
+	font-size: 1.25rem;
+	line-height: 1.3;
+}
+
+a,
+a:visited {
+	text-decoration: none;
+}
+
+/* ======================== */
+@font-face {
+	font-family: gang3;
+	font-style: normal;
+	src: url(../gang3.ttf);
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	text-decoration: none;
+}
+
+body {
+	/* font-family: Arial, Helvetica, sans-serif; */
+	min-height: 100vh;
+	width: 100%;
+	background: url(img/dragon.jpeg) no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+/* ==============menu================================== */
+nav {
+	display: block;
+	width: inherit;
+	height: auto;
+	position: sticky;
+	top: 0;
+	text-transform: capitalize;
+	font-family: gang3;
+}
+
+nav ul {
+	display: grid;
+	grid-gap: 5px;
+	grid-template-columns: 1fr repeat(5, 0.33fr);
+	align-items: center;
+	list-style: none;
+	background: #241c3d;
+	box-shadow: 0 5px 10px black;
+}
+
+/* list itemy */
+nav ul li {
+	text-align: center;
+	justify-content: center;
+	position: relative;
+}
+
+/* pola z linkiem */
+nav ul li a {
+	display: block;
+	font-size: 1.4rem;
+	color: #d4b113;
+	padding: 6.5px 0px;
+	border: 2px solid rgb(235, 220, 21);
+}
+
+.logo {
+	margin: 0;
+	letter-spacing: 2px;
+	font-weight: bold;
+	font-size: 2rem;
+	display: block;
+	padding: 0;
+	background-color: #4b1414;
+}
+
+nav ul li a:hover {
+	color: #ecf7f6;
+}
+
+/* podmenu drugie */
+nav ul li ul {
+	display: none;
+	position: absolute;
+	left: 0;
+	top: 100%;
+	width: 100%;
+	background: transparent;
+	padding-top: 5px;
+	overflow: hidden;
+}
+
+.sub-a {
+	display: block;
+	background-color: #4b1414;
+}
+
+nav ul li:focus-within > ul,
+nav ul li:hover > ul {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 5px;
+}
+
+/* menu ikonka */
+.guzik {
+	display: none;
+	font-size: 3rem;
+	/* width: 60px; */
+	height: 49px;
+	color: #cfd9e4;
+	cursor: pointer;
+	border-radius: 50%;
+	line-height: 50px;
+	box-shadow: 0 0px 20px black;
+	background-color: rgba(0, 0, 0, 0.99);
+}
+
+/* ptaszek kwadracik */
+#ptaszek {
+	display: none;
+}
+
+/* =============komórka============= */
+
+@media screen and (max-width: 999px) {
+	nav ul {
+		display: grid;
+		grid-template-columns: 1fr;
+		position: fixed;
+		top: -100%;
+		width: 100vw;
+		transition: top 1s ease-out;
+	}
+
+	#ptaszek:checked ~ ul {
+		top: 0;
+	}
+
+	.guzik {
+		position: fixed;
+		display: block;
+		z-index: 2;
+		top: 0;
+		right: 0;
+	}
+
+	nav ul li {
+		width: 100%;
+	}
+
+	.logo {
+		font-size: 2rem;
+		padding: 0 15px;
+	}
+
+	/* podmenu drugie */
+	nav ul li ul {
+		position: relative;
+	}
+
+	nav ul li:focus-within > ul,
+	nav ul li:hover > ul {
+		gap: 0;
+	}
+}
+
+/* ====================-============= */
+
+.napis {
+	text-align: center;
+}
+.kafelki {
+	display: grid;
+	grid-template-columns: 800px;
+	gap: 1rem;
+	max-width: 1340px;
+	margin: 0 auto;
+	padding: 1rem;
+	justify-content: center;
+}
+
+.card {
+	display: grid;
+	grid-template-columns: 160px 1fr;
+	border: 3px solid rgb(170, 0, 170);
+	background: #ffffff;
+	border-radius: 10px;
+	color: #101010;
+	overflow: hidden;
+}
+
+.card__image {
+	grid-column: 1 / 2;
+	background: no-repeat center center/cover;
+}
+
+span {
+	display: inline-block;
+	border: 2px solid #ffffff;
+	padding: 1rem 3rem;
+	color: #ffffff;
+	background: rgb(0, 0, 0, 1);
+	text-transform: uppercase;
+	font-weight: 700;
+	/* height: 6rem; */
+}
+
+.card__content {
+	grid-column: 2 / 3;
+	padding: 1.5rem;
+}
+
+.card__title {
+	font-size: 1.75rem;
+	line-height: 1.1;
+	font-weight: 700;
+	margin-bottom: 0.75rem;
+}
+
+.card__description {
+	font-size: 1rem;
+	line-height: 1.5;
+	margin-bottom: 0.75rem;
+}
+
+@media screen and (max-width: 47em) {
+	.kafelki {
+		grid-template-columns: 1fr;
+	}
+
+	.card {
+	}
+	.card__image {
+	}
+	.card__content {
+	}
+}
+
+@media screen and (max-width: 32em) {
+	.card {
+		grid-template-columns: 60px 1fr;
+	}
+	.card__image {
+	}
+	.card__content {
+	}
+}
